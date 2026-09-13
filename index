@@ -1,0 +1,529 @@
+<div id="afiliados-na">
+<style>
+/* =========================================================
+   PROGRAMA DE AFILIADOS — NATURALEZA ABIERTA
+   Estética editorial orgánica / Optimizado para GitHub Pages
+   ========================================================= */
+#afiliados-na {
+  --green: #405746;
+  --green-light: #607765;
+  --cream: #f7f3ea;
+  --paper: #fffdf8;
+  --sand: #e8ddc9;
+  --gold: #b79b63;
+  --text: #30372f;
+  --muted: #70766f;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: 
+    radial-gradient(circle at 12% 8%, rgba(183, 155, 99, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 85%, rgba(64, 87, 70, 0.10), transparent 32%),
+    var(--cream);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  box-sizing: border-box;
+}
+
+#afiliados-na * {
+  box-sizing: border-box;
+}
+
+.af-wrap {
+  width: min(1140px, 92%);
+  margin: 0 auto;
+  padding: 50px 0 90px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.af-hero {
+  text-align: center;
+  padding: 40px 10px 25px;
+}
+
+.af-badge {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  background: var(--sand);
+  padding: 7px 18px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+}
+
+.af-title {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.af-subtitle {
+  max-width: 780px;
+  margin: 22px auto 35px;
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--green-light);
+}
+
+/* BOTONERA DUAL */
+.af-cta-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.af-btn-primary {
+  display: inline-block;
+  background: var(--green);
+  color: #fffdf8;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding: 17px 32px;
+  border-radius: 40px;
+  transition: all .25s ease;
+  box-shadow: 0 10px 25px rgba(64, 87, 70, 0.22);
+}
+
+.af-btn-primary:hover {
+  transform: translateY(-2px);
+  background: #324436;
+  box-shadow: 0 14px 30px rgba(64, 87, 70, 0.3);
+}
+
+.af-btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--green);
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding: 16px 30px;
+  border-radius: 40px;
+  border: 1.5px solid var(--green);
+  transition: all .25s ease;
+}
+
+.af-btn-secondary:hover {
+  background: rgba(64, 87, 70, 0.08);
+  transform: translateY(-2px);
+}
+
+/* IMÁGENES / CONTENEDORES */
+.af-visual-section {
+  max-width: 1000px;
+  margin: 45px auto 65px;
+  text-align: center;
+}
+
+.af-visual-box {
+  width: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 22px 60px rgba(50, 50, 40, 0.12);
+  border: 1px solid rgba(64, 87, 70, 0.10);
+  background: rgba(255, 253, 248, 0.7);
+}
+
+.af-visual-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 520px;
+}
+
+/* =========================================================
+   CONDICIÓN CLAVE (REQUISITO ÉTICO)
+   ========================================================= */
+.af-requirement-strip {
+  max-width: 880px;
+  margin: 0 auto 65px;
+  background: rgba(255, 253, 248, 0.95);
+  border-left: 4px solid var(--gold);
+  border-radius: 16px;
+  padding: 26px 30px;
+  box-shadow: 0 10px 30px rgba(50, 50, 40, 0.05);
+}
+
+.af-requirement-strip h3 {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 21px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.af-requirement-strip p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* =========================================================
+   CÓMO FUNCIONA (PASOS)
+   ========================================================= */
+.af-section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.af-section-title h2 {
+  color: var(--green);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.af-section-title p {
+  color: var(--muted);
+  font-size: 17px;
+  margin: 0;
+}
+
+.af-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 75px;
+}
+
+.af-step-card {
+  background: rgba(255, 253, 248, 0.85);
+  border: 1px solid rgba(64, 87, 70, 0.12);
+  border-radius: 24px;
+  padding: 36px 26px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(50, 50, 40, 0.05);
+}
+
+.af-step-num {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: var(--sand);
+  color: var(--green);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0 auto 20px;
+}
+
+.af-step-card h3 {
+  color: var(--green);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.af-step-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+}
+
+/* =========================================================
+   PANEL VERDE DE BENEFICIOS
+   ========================================================= */
+.af-benefits-panel {
+  background: var(--green);
+  color: #fffdf8;
+  border-radius: 30px;
+  padding: 55px 45px;
+  margin-bottom: 75px;
+}
+
+.af-benefits-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.af-benefits-header h3 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  color: #fffdf8;
+}
+
+.af-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.af-benefit-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.af-benefit-item h4 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #f5ead7;
+}
+
+.af-benefit-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.af-faq-list {
+  max-width: 820px;
+  margin: 0 auto 75px;
+}
+
+.af-faq-item {
+  background: rgba(255, 253, 248, 0.75);
+  border: 1px solid rgba(64, 87, 70, 0.12);
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+
+.af-faq-item h4 {
+  margin: 0 0 10px;
+  color: var(--green);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.af-faq-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+/* =========================================================
+   CTA FINAL
+   ========================================================= */
+.af-final-card {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 253, 248, 0.95);
+  border: 1px solid rgba(64, 87, 70, 0.16);
+  border-radius: 30px;
+  padding: 50px 35px;
+  box-shadow: 0 20px 60px rgba(50, 50, 40, 0.08);
+}
+
+.af-final-card h3 {
+  color: var(--green);
+  font-size: 34px;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+
+.af-final-card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 30px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+  .af-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .af-btn-primary, .af-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  .af-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .af-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .af-benefits-panel {
+    padding: 38px 22px;
+  }
+}
+</style>
+
+<div class="af-wrap">
+
+  <!-- HERO -->
+  <section class="af-hero">
+    <div class="af-badge">Comunidad & Afiliados</div>
+    <h1 class="af-title">Recomienda bienestar desde tu propia experiencia</h1>
+    <p class="af-subtitle">Conviértete en afiliado de Naturaleza Abierta: prueba el bienestar en ti, comparte lo que funciona y genera ingresos con total transparencia.</p>
+    
+    <div class="af-cta-group">
+      <a href="https://wa.me/584221482602?text=Hola%20Valentina,%20deseo%20unirme%20al%20programa%20de%20afiliados%20de%20Naturaleza%20Abierta" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="af-btn-primary">
+        💬 CONTACTAR A VALENTINA (WHATSAPP)
+      </a>
+      <a href="https://www.naturalezaabierta.com/tienda/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="af-btn-secondary">
+        🛍️ EXPLORAR CATÁLOGO
+      </a>
+    </div>
+  </section>
+
+  <!-- IMAGEN HERO 1 -->
+  <section class="af-visual-section">
+    <div class="af-visual-box">
+      <!-- Reemplaza el src con tu enlace de GitHub -->
+      <img id="img-hero" src="IMAGEN_HERO_AQUI.jpg" alt="Comunidad y bienestar natural Naturaleza Abierta">
+    </div>
+  </section>
+
+  <!-- REQUISITO / PRINCIPIO ÉTICO -->
+  <section class="af-requirement-strip">
+    <h3>🌱 Nuestro principio: Primero vivirlo, luego recomendarlo</h3>
+    <p>En Naturaleza Abierta creemos que la recomendación más poderosa nace de la vivencia personal. Para activar tu enlace de afiliado, <strong>es requisito haber adquirido al menos uno de nuestros productos o libros</strong>. Así garantizamos que hables con total propiedad y transmitas confianza real a tu comunidad.</p>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="af-how">
+    <div class="af-section-title">
+      <h2>¿Cómo ingresar al programa?</h2>
+      <p>Un proceso sencillo, humano y acompañado paso a paso.</p>
+    </div>
+
+    <div class="af-steps-grid">
+      <div class="af-step-card">
+        <div class="af-step-num">1</div>
+        <h3>Prueba un producto</h3>
+        <p>Elige el recurso o producto natural que resuene contigo desde la tienda oficial para conocer de primera mano su beneficio.</p>
+      </div>
+
+      <div class="af-step-card">
+        <div class="af-step-num">2</div>
+        <h3>Escríbele a Valentina</h3>
+        <p>Nuestra asistente te dará la bienvenida por WhatsApp, verificará tu acceso y te entregará tu enlace único de recomendación.</p>
+      </div>
+
+      <div class="af-step-card">
+        <div class="af-step-num">3</div>
+        <h3>Comparte y comisiona</h3>
+        <p>Comparte tu experiencia con tu círculo o redes. Cada compra efectuada a través de tu enlace te acreditará comisiones directas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGUNDA IMAGEN (PRODUCTOS / PROCESO) -->
+  <section class="af-visual-section" style="margin-top: -20px; margin-bottom: 60px;">
+    <div class="af-visual-box">
+      <!-- Reemplaza el src con tu enlace de GitHub -->
+      <img id="img-productos" src="IMAGEN_PRODUCTOS_AQUI.jpg" alt="Productos y recursos de Naturaleza Abierta">
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="af-benefits-panel">
+    <div class="af-benefits-header">
+      <h3>Lo que tienes a tu favor</h3>
+      <p style="margin: 0; font-size: 16px; opacity: .88;">Un ecosistema integral para que tu recomendación sea fácil y gratificante.</p>
+    </div>
+
+    <div class="af-benefits-grid">
+      <div class="af-benefit-item">
+        <h4>🌿 Soluciones reales y naturales</h4>
+        <p>Formulaciones artesanales, manuales interactivos y suplementación bioenergética pensados para el bienestar cotidiano.</p>
+      </div>
+      <div class="af-benefit-item">
+        <h4>📊 Seguimiento automático</h4>
+        <p>Control exacto de las visitas referidas, conversiones y pedidos generados desde tu enlace de afiliado.</p>
+      </div>
+      <div class="af-benefit-item">
+        <h4>🤝 Soporte continuo con Valentina</h4>
+        <p>Acompañamiento directo por WhatsApp para resolver cualquier consulta sobre tus enlaces o comisiones.</p>
+      </div>
+      <div class="af-benefit-item">
+        <h4>💳 Pagos transparentes</h4>
+        <p>Liquidación puntual de tus comisiones acordadas a través de métodos de cobro accesibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section class="af-faqs">
+    <div class="af-section-title">
+      <h2>Preguntas frecuentes</h2>
+      <p>Resolvemos las dudas principales antes de empezar.</p>
+    </div>
+
+    <div class="af-faq-list">
+      <div class="af-faq-item">
+        <h4>¿Por qué debo adquirir un producto antes de afiliarme?</h4>
+        <p>Porque la credibilidad es la base de todo. Queremos que recomiendes con convicción y entusiasmo real tras haber experimentado el producto tú mismo.</p>
+      </div>
+      <div class="af-faq-item">
+        <h4>¿Si ya compré antes en la tienda, puedo afiliarme?</h4>
+        <p>¡Por supuesto! Si ya eres cliente de Naturaleza Abierta, solo escríbele a Valentina indicándole tu compra previa para activar tu cuenta de inmediato.</p>
+      </div>
+      <div class="af-faq-item">
+        <h4>¿Cómo me comunico para gestionar mis pagos?</h4>
+        <p>Todo el soporte y la confirmación de tus ventas se gestiona directamente por WhatsApp con nuestro equipo y Valentina.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE Y CTA FINAL -->
+  <section class="af-final-card">
+    <div style="font-size: 32px; margin-bottom: 12px;">🌿</div>
+    <h3>¿Comenzamos hoy?</h3>
+    <p>Adquiere tu primer producto o escríbele de inmediato a Valentina para dar el primer paso hacia tu afiliación.</p>
+    
+    <div class="af-cta-group">
+      <a href="https://wa.me/584221482602?text=Hola%20Valentina,%20deseo%20unirme%20al%20programa%20de%20afiliados%20de%20Naturaleza%20Abierta" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="af-btn-primary">
+        HABLAR CON VALENTINA
+      </a>
+      <a href="https://catalogo.naturalezaabierta.com/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="af-btn-secondary">
+        IR AL CATÁLOGO DE PRODUCTOS
+      </a>
+    </div>
+  </section>
+
+</div>
+</div>
