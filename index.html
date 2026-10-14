@@ -356,6 +356,159 @@
   margin: 0 auto 30px;
 }
 
+/* VIDEO EXPLICATIVO — versión web (horizontal) */
+.af-only-mobile { display: none; }
+
+.af-video-section {
+  max-width: 1000px;
+  margin: 10px auto 60px;
+  text-align: center;
+}
+
+.af-video-title {
+  color: var(--green);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.af-video-sub {
+  color: var(--muted);
+  font-size: 17px;
+  margin: 0 0 24px;
+}
+
+.af-video-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #1f2a22;
+  box-shadow: 0 22px 60px rgba(50, 50, 40, 0.18);
+  border: 1px solid rgba(64, 87, 70, 0.12);
+}
+
+.af-video-box wistia-player {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+wistia-player[media-id='dkxhycn6cw']:not(:defined) {
+  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/dkxhycn6cw/swatch');
+  display: block;
+  filter: blur(5px);
+  padding-top: 56.25%;
+}
+
+wistia-player[media-id='j1m4ubhw25']:not(:defined) {
+  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/j1m4ubhw25/swatch');
+  display: block;
+  filter: blur(5px);
+  padding-top: 177.78%;
+}
+
+/* VIDEO EXPLICATIVO — botón y ventana completa (móvil, formato reel) */
+.af-btn-video {
+  display: inline-block;
+  background: var(--gold);
+  color: #fffdf8;
+  border: 0;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  padding: 17px 32px;
+  border-radius: 40px;
+  box-shadow: 0 10px 25px rgba(183, 155, 99, 0.35);
+}
+
+.af-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(10, 14, 11, 0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.af-modal.af-open { display: flex; }
+
+.af-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 253, 248, 0.92);
+  color: var(--green);
+  font-size: 26px;
+  line-height: 44px;
+  cursor: pointer;
+}
+
+.af-modal-player {
+  width: min(100vw, calc(100vh * 0.5625));
+  width: min(100vw, calc(100dvh * 0.5625));
+  max-height: 100vh;
+}
+
+.af-modal-player wistia-player {
+  display: block;
+  width: 100%;
+}
+
+/* DISTRIBUIDORES — etiqueta "Próximamente" */
+.af-soon-tag {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fffdf8;
+  background: var(--green);
+  border: 2px solid #fffdf8;
+  padding: 10px 26px;
+  border-radius: 40px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px rgba(30, 30, 20, 0.28);
+}
+
+.af-soon-inline {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fffdf8;
+  background: var(--gold);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.af-btn-soon {
+  display: inline-block;
+  background: rgba(255, 253, 248, 0.25);
+  color: #fffdf8;
+  border: 2px dashed rgba(255, 253, 248, 0.8);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  padding: 16px 32px;
+  border-radius: 40px;
+  cursor: default;
+}
+
 /* =========================================================
    RESPONSIVE MÓVIL (AJUSTADO -30%)
    ========================================================= */
@@ -489,6 +642,37 @@
   .af-final-card p {
     font-size: 14px !important;
   }
+
+  /* Video: en móvil se oculta el horizontal y aparece el botón */
+  .af-only-desktop { display: none !important; }
+  .af-only-mobile { display: block; }
+
+  .af-btn-video {
+    width: 100%;
+    font-size: 14px !important;
+    padding: 15px 20px !important;
+    text-align: center;
+  }
+
+  .af-visual-section {
+    margin: 28px auto 34px;
+  }
+
+  .af-soon-tag {
+    font-size: 12px !important;
+    letter-spacing: 2px;
+    padding: 9px 20px;
+  }
+
+  .af-btn-soon {
+    width: 100%;
+    font-size: 14px !important;
+    padding: 14px 18px !important;
+    text-align: center;
+  }
+
+  .af-steps-grid { margin-bottom: 45px; }
+  .af-benefits-panel, .af-distributor-panel { margin-bottom: 45px; }
 }
 </style>
 
@@ -513,7 +697,17 @@
          class="af-btn-secondary">
         🛍️ EXPLORAR CATÁLOGO
       </a>
+      <button type="button" class="af-btn-video af-only-mobile" id="af-open-video">
+        ▶ VIDEO EXPLICATIVO DEL PROGRAMA
+      </button>
     </div>
+  </section>
+
+  <!-- VIDEO EXPLICATIVO (SOLO WEB) -->
+  <section class="af-video-section af-only-desktop">
+    <h2 class="af-video-title">Mira cómo funciona el programa</h2>
+    <p class="af-video-sub">En menos de dos minutos entiendes cómo recomendar y ganar con Naturaleza Abierta.</p>
+    <div class="af-video-box" id="af-video-web"></div>
   </section>
 
   <!-- IMAGEN HERO 1 -->
@@ -594,6 +788,7 @@
   <!-- DISTRIBUIDORES -->
   <section class="af-distributor-panel">
     <div class="af-benefits-header">
+      <div class="af-soon-tag">⏳ Próximamente</div>
       <h3>🚀 ¿Quieres ir más allá? Conviértete en Distribuidor</h3>
       <p style="margin: 0; font-size: 16px; opacity: .92;">Un siguiente nivel del programa, pensado para quienes quieren mover más volumen y multiplicar sus ingresos.</p>
     </div>
@@ -610,12 +805,7 @@
     </div>
 
     <div class="af-distributor-cta">
-      <a href="https://wa.me/584221482602?text=Hola%20Valentina,%20deseo%20informaci%C3%B3n%20sobre%20el%20programa%20de%20Distribuidores%20de%20Naturaleza%20Abierta" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="af-btn-primary">
-        💬 QUIERO SER DISTRIBUIDOR
-      </a>
+      <span class="af-btn-soon">Muy pronto abriremos el programa de distribuidores</span>
     </div>
   </section>
 
@@ -640,7 +830,7 @@
         <p>Todo el soporte y la confirmación de tus ventas se gestiona directamente por WhatsApp con nuestro equipo y Valentina.</p>
       </div>
       <div class="af-faq-item">
-        <h4>¿En qué se diferencia un distribuidor de un afiliado?</h4>
+        <h4>¿En qué se diferencia un distribuidor de un afiliado? <span class="af-soon-inline">Próximamente</span></h4>
         <p>El afiliado comparte su enlace y gana comisión por cada venta. El distribuidor, además de eso, obtiene un descuento mayor directamente en la plataforma y sigue ganando comisiones cuando comparte su propio código, combinando ambos beneficios.</p>
       </div>
     </div>
@@ -669,4 +859,61 @@
   </section>
 
 </div>
+
+<!-- VENTANA DEL VIDEO REEL (MÓVIL) -->
+<div class="af-modal" id="af-modal" role="dialog" aria-modal="true" aria-label="Video explicativo del programa">
+  <button type="button" class="af-modal-close" id="af-close-video" aria-label="Cerrar video">×</button>
+  <div class="af-modal-player" id="af-video-reel"></div>
+</div>
+
+<script>
+(function () {
+  var WEB_ID = 'dkxhycn6cw', REEL_ID = 'j1m4ubhw25';
+  var loaded = {};
+
+  function loadScript(src, isModule) {
+    if (loaded[src]) return;
+    loaded[src] = true;
+    var s = document.createElement('script');
+    s.src = src;
+    s.async = true;
+    if (isModule) s.type = 'module';
+    document.head.appendChild(s);
+  }
+
+  var webBox = document.getElementById('af-video-web');
+  var reelBox = document.getElementById('af-video-reel');
+  var modal = document.getElementById('af-modal');
+  var mq = window.matchMedia('(min-width: 769px)');
+
+  function mountWeb() {
+    if (!mq.matches || webBox.firstChild) return;
+    loadScript('https://fast.wistia.com/player.js');
+    loadScript('https://fast.wistia.com/embed/' + WEB_ID + '.js', true);
+    webBox.innerHTML = '<wistia-player media-id="' + WEB_ID + '" aspect="1.7777777777777777"></wistia-player>';
+  }
+
+  function openReel() {
+    loadScript('https://fast.wistia.com/player.js');
+    loadScript('https://fast.wistia.com/embed/' + REEL_ID + '.js', true);
+    reelBox.innerHTML = '<wistia-player media-id="' + REEL_ID + '" aspect="0.5625"></wistia-player>';
+    modal.classList.add('af-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeReel() {
+    modal.classList.remove('af-open');
+    reelBox.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('af-open-video').addEventListener('click', openReel);
+  document.getElementById('af-close-video').addEventListener('click', closeReel);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeReel(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeReel(); });
+
+  mountWeb();
+  if (mq.addEventListener) mq.addEventListener('change', mountWeb);
+})();
+</script>
 </div>
