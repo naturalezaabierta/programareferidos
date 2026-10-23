@@ -410,8 +410,10 @@ wistia-player[media-id='j1m4ubhw25']:not(:defined) {
 
 /* VIDEO EXPLICATIVO — botón y ventana completa (móvil, formato reel) */
 .af-btn-video {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
-  background: var(--gold);
+  background: linear-gradient(135deg, #b79b63, #a3814f);
   color: #fffdf8;
   border: 0;
   cursor: pointer;
@@ -422,6 +424,45 @@ wistia-player[media-id='j1m4ubhw25']:not(:defined) {
   padding: 17px 32px;
   border-radius: 40px;
   box-shadow: 0 10px 25px rgba(183, 155, 99, 0.35);
+  animation: af-pulse-gold 2.4s ease-in-out infinite;
+}
+
+/* Reflejo dorado que cruza el botón */
+.af-btn-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 245, 210, 0) 0%,
+    rgba(255, 245, 210, 0.75) 50%,
+    rgba(255, 245, 210, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: af-shine 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes af-shine {
+  0%   { left: -75%; }
+  55%  { left: 130%; }
+  100% { left: 130%; }
+}
+
+@keyframes af-pulse-gold {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 25px rgba(183, 155, 99, 0.35),
+                0 0 0 0 rgba(183, 155, 99, 0.55);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(183, 155, 99, 0.5),
+                0 0 0 12px rgba(183, 155, 99, 0);
+  }
 }
 
 .af-modal {
